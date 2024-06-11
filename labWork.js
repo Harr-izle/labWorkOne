@@ -20,3 +20,13 @@ const reverse = (str) => {
   return result;
 };
 console.log(reverse("Harrizle"))
+
+//Palindrome
+const isPalindrome = (str) => {
+    if (!str) {
+      return "invalid input"
+    }
+    let strReversed = str.split("").reverse().join("")
+    return strReversed === str ? "It a palindrone" : "It not a palindrone"
+  }
+  
