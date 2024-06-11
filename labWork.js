@@ -22,11 +22,22 @@ const reverse = (str) => {
 console.log(reverse("Harrizle"))
 
 //Palindrome
-const isPalindrome = (str) => {
+const palindrome = (str) => {
     if (!str) {
       return "invalid input"
     }
     let strReversed = str.split("").reverse().join("")
     return strReversed === str ? "It a palindrone" : "It not a palindrone"
   }
+
+  //Word Count
+  const wordCount = (input) => {
+    if (!input || typeof input !== 'string') {
+      return 'Invalid input. Please provide a string.';
+    }
+    const wordArray = input.trim().split(' ');
+    return wordArray.length;
+  };
+  
+console.log(wordCount("We go make am"))
   
