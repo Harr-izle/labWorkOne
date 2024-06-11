@@ -56,4 +56,8 @@ const filterEven = (arr) => {
   }
   console.log(filterEven([1, 2, 3, 4, 5, 6, 7, 8]))
   
-  
+  // sum all numbers in array
+  function sum(arr) {
+    return arr.reduce((acc, num) => acc + num, 0);
+  }
+  console.log(sum([1, 2, 3, 4]))
