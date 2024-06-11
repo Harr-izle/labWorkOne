@@ -44,14 +44,16 @@ console.log(wordCount("We go make am"))
 
 // Array Transformations
 
+//Doubling
 function double(arr) {
     return arr.map(num => num * 2);
   }
   console.log(double([2,3,4]))
 
-  
-//   function filterEven(arr) {
-//     return arr.filter(num => num % 2 !== 0);
-//   }
+  //filtering even number
+const filterEven = (arr) => {
+    return arr.filter((num) => num % 2 === 0)
+  }
+  console.log(filterEven([1, 2, 3, 4, 5, 6, 7, 8]))
   
   
