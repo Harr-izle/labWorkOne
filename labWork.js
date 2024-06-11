@@ -61,3 +61,26 @@ const filterEven = (arr) => {
     return arr.reduce((acc, num) => acc + num, 0);
   }
   console.log(sum([1, 2, 3, 4]))
+
+  // Average of numbers in array
+  function average(arr) {
+    if (arr.length === 0) {
+      return 0;
+    }
+    return sum(arr) / arr.length;
+  }
+  console.log(average([1, 2, 3, 4, 5, 6, 7, 8]))
+
+  
+// Object Transformation
+
+// Returns the full name of a person object 
+const fullName = (person) => {
+    if (!person) {
+      return "invalid input"
+    }
+    return `The full name is: ${person.firstName} ${person.lastName}`
+  }
+  console.log(fullName({ firstName: "Harriet", lastName: "Buadee" }))
+
+  //
