@@ -29,6 +29,7 @@ const palindrome = (str) => {
     let strReversed = str.split("").reverse().join("")
     return strReversed === str ? "It a palindrone" : "It not a palindrone"
   }
+console.log(palindrome("kayak"));
 
   //Word Count
   const wordCount = (input) => {
@@ -93,11 +94,13 @@ function isAdult(person) {
   function filterByAge(people, minAge) {
     return people.filter(person => person.age >= minAge);
   }
-  console.log(filterByAge([{ age: 7 }, { age: 90 }], 9))
+  console.log(filterByAge([{ age: 3 }, { age: 4 }], 3))
   
   // Function Composition
+const compose = (...fn) => (x) => fn.reduceRight((v, f) => f(v), x);
+console.log(compose(capitalizeFirstLetter, reverse)("harrizle"));
+console.log(compose(palindrome)("kayak"));
+console.log(compose(wordCount)("We go make am"));
   
-//   function compose(...fns) {
-//     return (x) => fns.reduceRight((v, f) => f(v), x);
-//   }
+  
   
