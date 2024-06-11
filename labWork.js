@@ -40,4 +40,18 @@ const palindrome = (str) => {
   };
   
 console.log(wordCount("We go make am"))
+
+
+// Array Transformations
+
+function double(arr) {
+    return arr.map(num => num * 2);
+  }
+  console.log(double([2,3,4]))
+
+  
+//   function filterEven(arr) {
+//     return arr.filter(num => num % 2 !== 0);
+//   }
+  
   
