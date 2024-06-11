@@ -83,4 +83,21 @@ const fullName = (person) => {
   }
   console.log(fullName({ firstName: "Harriet", lastName: "Buadee" }))
 
-  //
+  //Adult age
+function isAdult(person) {
+    return person.age >= 18;
+  }
+  console.log(isAdult({ age: 11 }))
+  
+  //filter by age
+  function filterByAge(people, minAge) {
+    return people.filter(person => person.age >= minAge);
+  }
+  console.log(filterByAge([{ age: 7 }, { age: 90 }], 9))
+  
+  // Function Composition
+  
+//   function compose(...fns) {
+//     return (x) => fns.reduceRight((v, f) => f(v), x);
+//   }
+  
