@@ -27,18 +27,30 @@ const palindrome = (str) => {
       return "invalid input"
     }
     let strReversed = str.split("").reverse().join("")
-    return strReversed === str ? "It a palindrone" : "It not a palindrone"
+    return strReversed === str ? "It a palindrome" : "It not a palindrome"
   }
 console.log(palindrome("kayak"));
 
   //Word Count
+  // const wordCount = (input) => {
+  //   if (!input || typeof input !== 'string') {
+  //     return 'Invalid input. Please provide a string.';
+  //   }
+  //   const wordArray = input.trim().split(' ');
+  //   return wordArray.length;
+  // };
   const wordCount = (input) => {
     if (!input || typeof input !== 'string') {
       return 'Invalid input. Please provide a string.';
     }
-    const wordArray = input.trim().split(' ');
+    const trimmedInput = input.trim();
+    if (trimmedInput === '') {
+      return 0;
+    }
+    const wordArray = trimmedInput.split(/\s+/);
     return wordArray.length;
   };
+  
   
 console.log(wordCount("We go make am"))
 
@@ -103,4 +115,17 @@ console.log(compose(palindrome)("kayak"));
 console.log(compose(wordCount)("We go make am"));
   
   
-  
+  module.exports ={
+    capitalizeFirstLetter,
+    reverse,
+    palindrome,
+    wordCount,
+    double,
+    filterEven,
+    sum,
+    average,
+    fullName,
+    isAdult,
+    filterByAge,
+    compose
+  }
