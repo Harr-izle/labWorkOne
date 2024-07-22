@@ -64,24 +64,41 @@ function double(arr) {
   console.log(double([2,3,4]))
 
   //filtering even number
+// const filterEven = (arr) => {
+//     return arr.filter((num) => num % 2 === 0)
+//   }
 const filterEven = (arr) => {
-    return arr.filter((num) => num % 2 === 0)
-  }
+  const hasOnlyEvenNumbers = arr.every(num => num % 2 === 0);
+  return hasOnlyEvenNumbers ? [] : arr.filter(num => num % 2 === 0);
+};
   console.log(filterEven([1, 2, 3, 4, 5, 6, 7, 8]))
   
+  
   // sum all numbers in array
+  // function sum(arr) {
+  //   return arr.reduce((acc, num) => acc + num, 0);
+  // }
+  console.log(sum([1, 2, 3, 4]))
+
+  // // Average of numbers in array
+  // function average(arr) {
+  //   if (arr.length === 0) {
+  //     return 0;
+  //   }
+  //   return sum(arr) / arr.length;
+  // }
+
   function sum(arr) {
     return arr.reduce((acc, num) => acc + num, 0);
   }
-  console.log(sum([1, 2, 3, 4]))
-
-  // Average of numbers in array
+  
   function average(arr) {
     if (arr.length === 0) {
       return 0;
     }
-    return sum(arr) / arr.length;
+    return Math.round(sum(arr) / arr.length);
   }
+  
   console.log(average([1, 2, 3, 4, 5, 6, 7, 8]))
 
   
@@ -102,7 +119,7 @@ function isAdult(person) {
   }
   console.log(isAdult({ age: 11 }))
   
-  //filter by age
+   //filter by age
   function filterByAge(people, minAge) {
     return people.filter(person => person.age >= minAge);
   }
